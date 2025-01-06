@@ -1,0 +1,218 @@
+.body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+}
+
+.main-container {
+    background: linear-gradient(45deg, rgb(126, 148, 248), rgba(248, 21, 21, 0));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Prevents the image from repeating */
+    width: 100%;
+    /* Set the desired width of the container */
+    min-height: 90vh;
+    display: flex;
+    /* Flexbox for centering text */
+    flex-direction: column;
+    justify-content: center;
+    /* Horizontally centers content */
+
+}
+
+/* Bootstrap navbar link hover effect */
+.navbar .navbar-nav .nav-link {
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.navbar .navbar-nav .nav-link:hover {
+    color: #007bff;
+    background-color: #ddd;
+    border-radius: 5px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+.containerh {
+    color: rgb(12, 12, 12);
+    margin: 5px;
+    padding: 10px;
+}
+
+.containerh h1 {
+    font-weight: 600;
+    font-size: 50px;
+    color: rgb(37, 36, 36);
+}
+
+.Features-fluid2 {
+    padding: 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.Features-items {
+    background-color: #d5e6f1;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.Features-items img {
+    width: 100%;
+    max-width: 60px;
+    height: auto;
+    object-fit: cover;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+
+.filters {
+    text-align: start;
+    margin: 20px 0;
+}
+
+.filters button {
+    margin: 10px 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #0056b3;
+}
+
+.articles {
+    padding: 20px;
+}
+
+.article {
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgb(235, 178, 178);
+}
+
+.article h2 {
+    font-size: 1.5rem;
+    animation: zoomOut 1s ease-out;
+}
+
+.article a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
+
+@keyframes zoomOut {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.article p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.ad {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ddd;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.pagination {
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    .filters button {
+        padding: 8px 16px;
+    }
+
+    .article h2 {
+        font-size: 1.25rem;
+    }
+}
+
+/* Back Button */
+.back-button-container {
+    text-align: start;
+    margin: 20px 10px;
+}
+
+.back-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+.back-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

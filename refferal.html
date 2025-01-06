@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Referrals</title>
+    <link rel="shortcut icon" href="icpons/sale.gif" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .main-heading {
+            color: white;
+            background-color: #007bff;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .card {
+            border-radius: 12px;
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border: none;
+        }
+        .btn-success:hover {
+            background-color: #1e7e34;
+        }
+        .footer {
+            padding: 10px 0;
+            background-color: #343a40;
+            color: white;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        .footer small {
+            color: #adb5bd;
+        }
+        .referral-card {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand text-black" href="refferal.html"><b>Free Refferals</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faucet.html">Instant Faucet</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="bots.html">Telegram Bots</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Earn
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a  class="dropdown-item" href="faucet.html">Faucet
+                                <img src="icpons/earn-money.gif" alt="Faucet Icon" style="width: 40px; height: 40px; margin-right: 8px;">
+                                </a></li>
+                            <li><a class="dropdown-item" href="ptc-ads.html">Ptc Ads
+                                <img src="icpons/ads.gif" alt="Faucet Icon" style="width: 40px; height: 40px; margin-right: 8px;">
+                            </a></li>
+                            <li><a class="dropdown-item" href="survey.html">Survey
+                                <img src="icpons/checklist.gif" alt="Faucet Icon" style="width: 40px; height: 40px; margin-right: 8px;">
+                            </a></li>
+                            <li><a class="dropdown-item" href="offers.html">Offer
+                                <img src="icpons/job-offer.gif" alt="Faucet Icon" style="width: 40px; height: 40px; margin-right: 8px;">
+                            </a></li>
+                            <li><a class="dropdown-item" href="games.html">Games
+                                <img src="icpons/cube.gif" alt="Faucet Icon" style="width: 40px; height: 40px; margin-right: 8px;">
+                            </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="refferal.html" class="btn btn-secondary">Join Telegram</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="container py-4 text-center">
+        <h1 class="main-heading display-4">Free Referrals</h1>
+        <p class="lead text-muted">Complete the process below to get your free referrals!</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container-fluid">
+        <div id="step-1" class="row justify-content-center">
+            <!-- Step 1: Link Shortener -->
+            <div class="col-lg-6 col-md-8 referral-card">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">Step 1: Complete the Link Shortener</h5>
+                        <p class="card-text text-muted">Click the button below to complete the link shortener task.</p>
+                        <a href="https://en.shrinke.me/btoQSN" target="_blank" class="btn btn-primary btn-lg" onclick="showStep2()">Shrink Me</a>
+                        <a href="https://tpi.li/Eqetba" target="_blank" class="btn btn-primary btn-lg" onclick="showStep2()">Shrink Earn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="step-2" class="row justify-content-center d-none">
+            <!-- Step 2: Enter Code -->
+            <div class="col-lg-6 col-md-8 referral-card">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">Step 2: Enter the Code</h5>
+                        <p class="card-text text-muted">Enter the code you received after completing the task.</p>
+                        <input type="text" id="verification-code" class="form-control mb-3" placeholder="Enter your code">
+                        <button class="btn btn-success btn-lg" onclick="verifyCode()">Verify Code</button>
+                        <p id="verification-error" class="text-danger mt-3 d-none">Invalid code. Please try again.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="step-3" class="row justify-content-center d-none">
+            <!-- Step 3: Success Message with Options -->
+            <div class="col-lg-6 col-md-8 referral-card">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">Success!</h5>
+                        <p class="card-text text-muted">You have been verified and earned your free referrals. Choose one of the options below to proceed:</p>
+                        <div class="d-flex flex-column gap-3 mt-4">
+                            <a href="https://t.me/+4rns7EWeXZ42MTdl" target="_blank" class="btn btn-outline-primary btn-lg">Join Telegram Group & Promote Your Link</a>
+                            <button class="btn btn-outline-secondary btn-lg" onclick="showAdTasks()">Buy 10 Referrals After Watching 10 Ads</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="ad-tasks" class="row justify-content-center d-none">
+            <!-- Step 4: Ad Tasks -->
+            <div class="col-lg-6 col-md-8 referral-card">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3">Watch Ads to Get Referrals</h5>
+                        <p class="card-text text-muted">Watch 10 ads to claim your 10 referrals.</p>
+                        <button class="btn btn-primary btn-lg">Start Watching Ads</button>
+                        <P>Sorry we dont have ads right now</P>
+                        <P>you can place your ads by purchase ads </P>
+                        <p>Join Telegram and contant to Admin for ad placement</p>
+                        <a href="https://t.me/+4rns7EWeXZ42MTdl" target="_blank" class="btn btn-outline-primary btn-lg">Join Telegram Group & Promote Your Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer ">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 Free Referrals. All rights reserved.</p>
+            <small class="text-muted">Your gateway to effortless rewards.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function showStep2() {
+            document.getElementById('step-1').classList.add('d-none');
+            document.getElementById('step-2').classList.remove('d-none');
+        }
+
+        function verifyCode() {
+            const validCode = "819492"; // Replace with your server-side verification logic
+            const userCode = document.getElementById('verification-code').value;
+
+            if (userCode === validCode) {
+                document.getElementById('step-2').classList.add('d-none');
+                document.getElementById('step-3').classList.remove('d-none');
+            } else {
+                document.getElementById('verification-error').classList.remove('d-none');
+            }
+        }
+
+        function showAdTasks() {
+            document.getElementById('step-3').classList.add('d-none');
+            document.getElementById('ad-tasks').classList.remove('d-none');
+        }
+    </script>
+</body>
+</html>
