@@ -6,7 +6,7 @@ async function generateShortenedLink() {
     const taskCompletionURL = "https://chander3012.github.io/refferals/thank-you?task1-completed=true"; // URL where user will be redirected after task
     const alias = "link-shortener-task"; // Custom alias for the shortened URL
 
-    const apiUrl = `https://shrinkearn.com/api?api=f0873b57ded6b79c5086f2e977db73793512191b&url=${encodeURIComponent(taskCompletionURL)}&alias=${alias}`;
+   const apiUrl = `https://cors-anywhere.herokuapp.com/https://shrinkearn.com/api?api=f0873b57ded6b79c5086f2e977db73793512191b&url=${encodeURIComponent(taskCompletionURL)}&alias=${alias}`;
 
     try {
         console.log("API Request URL:", apiUrl);
