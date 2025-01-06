@@ -9,9 +9,13 @@ async function generateShortenedLink() {
     const apiUrl = `https://shrinkearn.com/api?api=f0873b57ded6b79c5086f2e977db73793512191b&url=${encodeURIComponent(taskCompletionURL)}&alias=${alias}`;
 
     try {
+        console.log("API Request URL:", apiUrl);
+
         // Fetch the shortened link from Shrinkearn API
         const response = await fetch(apiUrl);
         const data = await response.json();
+
+        console.log("API Response:", data);
 
         if (data.status === 'success' && data.shortenedUrl) {
             const shortenedLink = data.shortenedUrl; // Get the shortened link
