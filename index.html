@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verification System</title>
+  <title>Verification Task</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
@@ -48,100 +48,28 @@
       background-color: #0056b3;
       transform: scale(1.05);
     }
-    .verification-section {
-      margin-top: 50px;
-      text-align: center;
-    }
-    .verification-section input {
-      padding: 10px;
-      font-size: 16px;
-    }
-    .verification-section button {
-      margin-top: 10px;
-      padding: 10px 20px;
-    }
   </style>
 </head>
 <body>
 
   <div class="container">
     <div class="heading">
-      Verification System
+      Verification Task
     </div>
 
     <div class="task-section">
-      <h2>Step 1: Solve the Task</h2>
-      <p>Click on the "Get Link" button below. Complete the task and return with your verification code!</p>
-      <button class="btn btn-primary" id="getLinkBtn" onclick="getLink()">Get Link</button>
-    </div>
-
-    <div class="verification-section" id="verificationSection" style="display: none;">
-      <h2>Step 2: Enter Your Verification Code</h2>
-      <input type="text" id="verificationCode" placeholder="Enter your 6-digit code" maxlength="6">
-      <button class="btn btn-primary" onclick="verifyCode()">Verify</button>
+      <h2>Step 1: Complete the Task</h2>
+      <p>Click on the "Get Link" button below. Complete the task, then come back and enter the verification code to be verified!</p>
+      <button class="btn btn-primary" onclick="getLink()">Get Link</button>
     </div>
   </div>
 
-  <!-- Success Modal -->
-  <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="successModalLabel">Verification Successful!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h2>You have been successfully verified!</h2>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <!-- Script to redirect the user to the task -->
+  <script>
+    function getLink() {
+      // Redirect to the link shortener task
+      window.location.href = "https://shrinkme.io/st?api=eac3e0b8901b846eb9ddaa05e03bd568aeae26bb&url=https://github.com/Chander3012/refferals";
+    }
+  </script>
 </body>
-
-<!-- Bootstrap JS Bundle -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  // Example verification code for the task (you can generate a new one each time)
-  let verificationCode = generateVerificationCode();
-
-  function getLink() {
-    // Step 1: Redirect to the link shortener task page
-    window.location.href = "https://shrinkme.io/st?api=eac3e0b8901b846eb9ddaa05e03bd568aeae26bb&url=https://chander3012.github.io/refferals/";
-  }
-
-  function generateVerificationCode() {
-    // Generate a random 6-digit verification code
-    return Math.floor(100000 + Math.random() * 900000);
-  }
-
-  function verifyCode() {
-    const userInputCode = document.getElementById('verificationCode').value;
-    
-    // Check if the entered code matches the generated code
-    if (userInputCode === verificationCode.toString()) {
-      // Display success modal if the code matches
-      var successModal = new bootstrap.Modal(document.getElementById('successModal'));
-      successModal.show();
-    } else {
-      alert('Incorrect code. Please try again.');
-    }
-  }
-
-  // When the page loads, if the user has completed the task (detected by the URL), show the verification section
-  window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('completed') && urlParams.get('completed') === 'true') {
-      document.getElementById('verificationSection').style.display = 'block';
-    }
-  };
-</script>
 </html>
-
-
-
-
