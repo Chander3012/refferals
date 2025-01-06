@@ -15,7 +15,7 @@ window.onload = () => {
 function completeLinkShortener() {
     // Redirect to the link shortener service
     // Add your link shortener service URL here, for example:
-    window.location.href = "https://shrinkme.io/st?api=eac3e0b8901b846eb9ddaa05e03bd568aeae26bb&url=yourdestinationlink.com";
+    window.location.href = "https://shrinkme.io/st?api=eac3e0b8901b846eb9ddaa05e03bd568aeae26bb&url=https://chander3012.github.io/refferals/";
 }
 
 // Generate a random 6-digit code and show it
